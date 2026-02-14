@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - Point Zero Security</title>
+    <title>Contact - Guardem</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
@@ -16,29 +16,49 @@
     <nav class="navbar">
         <div class="container nav-content">
             <div class="logo">
-                <img src="/logo.png" alt="Point Zero Security" height="50">
-                <span>POINT ZERO SECURITY</span>
+                <img src="/logo.png" alt="Guardem" height="50">
+                <div class="logo-text">
+                    <span class="brand-name">GUARDEM</span>
+                    <span class="brand-subtitle">Security LTD.</span>
+                </div>
             </div>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/about.html">About</a>
-                <a href="/services.html">Services</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Services &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="/uniform-security.html">Uniform Security</a>
+                        <a href="/office-security.html">Office Security Services</a>
+                        <a href="/event-security.html">Event Security Services</a>
+                        <a href="/loss-prevention.html">Loss Prevention Services</a>
+                        <a href="/elite-security.html">Elite Suit & Tie Security</a>
+                        <a href="/concierge-security.html">Concierge Security Services</a>
+                        <a href="/executive-protection.html">Executive Protection</a>
+                        <a href="/house-protection.html">House Protection Services</a>
+                    </div>
+                </div>
                 <a href="/faq.html">FAQ</a>
                 <a href="/contact.html" class="active">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header class="page-header">
-        <div class="container">
-            <h1>Hire <span class="text-gold">Us</span></h1>
-            <p>Book a consultation or hire security personnel today.</p>
+    <header class="parallax-hero">
+        <div class="parallax-bg"
+            style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop');">
+        </div>
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <h1 class="reveal-text">Hire <span class="text-gold">Us</span></h1>
+            <p class="gsap-fade-up">Professional security solutions tailored to your needs.</p>
         </div>
     </header>
 
-    <section class="contact-section gsap-fade-up">
-        <div class="container contact-grid">
-            <form class="contact-form" id="bookingForm">
+    <section class="contact-section section-full">
+        <div class="container contact-grid stagger-grid">
+            <form class="contact-form glass-card" id="bookingForm" style="padding: 3rem;">
+                <h2 style="margin-bottom: 2rem;">Get a Quote</h2>
                 <div class="form-group">
                     <label>Full Name</label>
                     <input type="text" required placeholder="John Doe">
@@ -63,14 +83,19 @@
                     <label>Message / Details</label>
                     <textarea rows="5" placeholder="Tell us about your security needs..."></textarea>
                 </div>
-                <button type="submit" class="btn">Request Consultation</button>
+                <button type="submit" class="btn" style="width: 100%;">Request Consultation</button>
             </form>
 
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p>Email: info@pzfingerprinting.com</p>
-                <p>Phone: (+1) 778-297-2000</p>
-                <p>Address: 203-12885 80th Avenue, Surrey, BC, V3W 0E6</p>
+            <div class="contact-info glass-dark" style="padding: 3rem; border-radius: 16px;">
+                <h3 style="color: var(--primary-gold); margin-bottom: 1.5rem;">Contact Information</h3>
+                <p><strong>Email:</strong> info@guardem.com</p>
+                <p><strong>Phone:</strong> (+1) 778-297-2000</p>
+                <p><strong>Address:</strong><br>203-12885 80th Avenue,<br>Surrey, BC, V3W 0E6</p>
+
+                <div style="margin-top: 2rem;">
+                    <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=1000&auto=format&fit=crop"
+                        alt="Contact Support" style="width: 100%; border-radius: 8px; opacity: 0.8;">
+                </div>
             </div>
         </div>
     </section>
@@ -80,13 +105,19 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>POINT ZERO SECURITY</h3>
+                    <div class="logo footer-logo" style="margin-bottom: 1.5rem;">
+                        <img src="/logo.png" alt="Guardem">
+                        <div class="logo-text">
+                            <span class="brand-name">GUARDEM</span>
+                            <span class="brand-subtitle">Security LTD.</span>
+                        </div>
+                    </div>
                     <p>We provide innovative technology solutions with a wide range of services tailored to meet your
                         unique needs. Our clear procedures and precise reporting illustrate the value of our work.</p>
                     <div class="social-links">
-                        <a href="#">FB</a>
-                        <a href="#">IG</a>
-                        <a href="#">LI</a>
+                        <a href="https://www.facebook.com/profile.php?id=61551417292622" target="_blank">FB</a>
+                        <a href="https://www.instagram.com/pointzeroglobal?igsh=OHV4cWUzZ3UzMG9x" target="_blank">IG</a>
+                        <a href="https://www.linkedin.com/company/point-zero-global-services-ltd" target="_blank">LI</a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -111,11 +142,11 @@
                     <h3>CONTACT</h3>
                     <p>203-12885 80th Avenue, Surrey, BC, V3W 0E6</p>
                     <p>(+1) 778-297-2000</p>
-                    <p>info@pzfingerprinting.com</p>
+                    <p>info@guardem.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Point Zero Security. All Rights Reserved.</p>
+                <p>&copy; 2026 Guardem. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

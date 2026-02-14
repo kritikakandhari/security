@@ -5,26 +5,110 @@ import Lenis from 'lenis'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// Lenis
-const lenis = new Lenis()
+// Register ScrollTrigger
+// This line is redundant as it's already registered above, but keeping it as per the provided snippet.
+gsap.registerPlugin(ScrollTrigger);
+
+// Initialize Smooth Scroll (Lenis) - Kept largely same but ensured requestAnimationFrame
+const lenis = new Lenis();
+
+lenis.on('scroll', (e) => {
+    // console.log(e); // Optional: Debug scroll
+});
 
 function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
+    lenis.raf(time);
+    requestAnimationFrame(raf);
 }
 
-requestAnimationFrame(raf)
+requestAnimationFrame(raf);
 
-// Fade Up
-const fadeUps = document.querySelectorAll('.gsap-fade-up')
-fadeUps.forEach((elem) => {
-    gsap.from(elem, {
-        scrollTrigger: elem,
-        y: 30,
-        opacity: 0,
-        duration: 1
-    })
-})
+// --- Animations ---
+
+// 1. Navbar Scroll Effect (Glassmorphism on scroll)
+const navbar = document.querySelector('.navbar');
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.background = 'var(--nav-bg)'; // Or transparent if at very top
+            navbar.style.boxShadow = 'none';
+        }
+    });
+}
+
+// 2. Parallax Hero Effect
+const parallaxBgs = document.querySelectorAll('.parallax-bg');
+parallaxBgs.forEach(bg => {
+    gsap.to(bg, {
+        yPercent: 30, // Move background down slower than scroll
+        ease: "none",
+        scrollTrigger: {
+            trigger: bg.parentElement, // specific hero section
+            start: "top top", // start when top of section hits top of viewport
+            end: "bottom top", // end when bottom of section hits top of viewport
+            scrub: true
+        }
+    });
+});
+
+// 3. Fade Up Animations (Standard)
+const fadeUpElements = document.querySelectorAll('.gsap-fade-up');
+fadeUpElements.forEach(elem => {
+    gsap.fromTo(elem,
+        {
+            y: 50,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: elem,
+                start: "top 85%", // Start animation when 85% down viewport
+            }
+        }
+    );
+});
+
+// 4. Reveal Text Animation (for section titles)
+const revealElements = document.querySelectorAll('.reveal-text');
+revealElements.forEach(elem => {
+    gsap.fromTo(elem,
+        { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }, // Hidden (top down reveal)
+        {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", // Fully visible
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: elem,
+                start: "top 80%"
+            }
+        }
+    );
+});
+
+// 5. Service Row Parallax (Image moves slightly different speed)
+const serviceImages = document.querySelectorAll('.service-image img');
+serviceImages.forEach(img => {
+    gsap.fromTo(img,
+        { scale: 1.1 }, // Start zoomed in slightly
+        {
+            scale: 1, // Zoom out to normal
+            scrollTrigger: {
+                trigger: img.parentElement,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1 // Smooth scrub
+            }
+        }
+    );
+});
+
 
 // Accordion
 const accordions = document.querySelectorAll('.accordion-header')

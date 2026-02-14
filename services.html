@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services - Point Zero Security</title>
+    <title>Services - Guardem</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
@@ -16,97 +16,183 @@
     <nav class="navbar">
         <div class="container nav-content">
             <div class="logo">
-                <img src="/logo.png" alt="Point Zero Security" height="50">
-                <span>POINT ZERO SECURITY</span>
+                <img src="/logo.png" alt="Guardem" height="50">
+                <div class="logo-text">
+                    <span class="brand-name">GUARDEM</span>
+                    <span class="brand-subtitle">Security LTD.</span>
+                </div>
             </div>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/about.html">About</a>
-                <a href="/services.html" class="active">Services</a>
+                <div class="dropdown">
+                    <a href="#" class="active dropbtn">Services &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="/uniform-security.html">Uniform Security</a>
+                        <a href="/office-security.html">Office Security Services</a>
+                        <a href="/event-security.html">Event Security Services</a>
+                        <a href="/loss-prevention.html">Loss Prevention Services</a>
+                        <a href="/elite-security.html">Elite Suit & Tie Security</a>
+                        <a href="/concierge-security.html">Concierge Security Services</a>
+                        <a href="/executive-protection.html">Executive Protection</a>
+                        <a href="/house-protection.html">House Protection Services</a>
+                    </div>
+                </div>
                 <a href="/faq.html">FAQ</a>
                 <a href="/contact.html">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header class="page-header">
-        <div class="container">
-            <h1>Our <span class="text-gold">Services</span></h1>
-            <p>Comprehensive security solutions tailored to your specific needs.</p>
+    <header class="parallax-hero">
+        <div class="parallax-bg" style="background-image: url('/public/images/cctv.png');">
+        </div>
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <h1 class="reveal-text">Our <span class="text-gold">Services</span></h1>
+            <p class="gsap-fade-up">Comprehensive security solutions tailored to your specific needs.</p>
         </div>
     </header>
 
-    <section class="services-list gsap-fade-up">
+    <section class="services-list section-full">
         <div class="container">
+            <h2 class="section-title reveal-text" style="text-align: center; margin-bottom: 3rem;">Elite Security <span
+                    class="text-secondary">Solutions</span></h2>
 
-            <!-- Service 1 -->
-            <div class="service-row">
-                <div class="service-info">
-                    <h2>Surveillance & Monitoring</h2>
-                    <p>Our state-of-the-art surveillance systems provide 24/7 eyes on your property. Utilizing
-                        high-definition cameras with night vision and motion tracking capabilities, our monitoring
-                        center ensures that no activity goes unnoticed.</p>
-                    <p>We offer real-time alerts, cloud storage for footage evidence, and remote access so you can view
-                        your feeds from anywhere in the world. Our proactive monitoring team is trained to distinguish
-                        between false alarms and genuine threats, ensuring rapid response times.</p>
+            <div class="services-grid stagger-grid">
+
+                <!-- 1. Uniform Security -->
+                <div class="glass-card-3d">
+                    <div class="card-image">
+                        <img src="/public/images/uniform-security.webp" alt="Uniform Security">
+                    </div>
+                    <div class="card-content">
+                        <h3>Uniform Security</h3>
+                        <p>Visible deterrence with highly trained professional guards for any environment.</p>
+                        <a href="/uniform-security.html" class="btn-link">Explore Service <span>&rarr;</span></a>
+                    </div>
                 </div>
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1000&auto=format&fit=crop"
-                        alt="CCTV Monitoring">
+
+                <!-- 2. Office Security -->
+                <div class="glass-card-3d">
+                    <div class="card-image">
+                        <img src="/public/images/office-security.jpg" alt="Office Security">
+                    </div>
+                    <div class="card-content">
+                        <h3>Office Security</h3>
+                        <p>Comprehensive protection for corporate buildings, assets, and employees.</p>
+                        <a href="/office-security.html" class="btn-link">Explore Service <span>&rarr;</span></a>
+                    </div>
                 </div>
+
+                <!-- 3. Event Security -->
+                <div class="glass-card-3d">
+                    <div class="card-image">
+                        <img src="/public/images/event-security.webp" alt="Event Security">
+                    </div>
+                    <div class="card-content">
+                        <h3>Event Security</h3>
+                        <p>Crowd management and safety for specialized events of all sizes.</p>
+                        <a href="/event-security.html" class="btn-link">Explore Service <span>&rarr;</span></a>
+                    </div>
+                </div>
+
+                <!-- 4. Loss Prevention -->
+                <div class="glass-card-3d">
+                    <div class="card-image">
+                        <img src="/public/images/loss-prevention.jpg" alt="Loss Prevention">
+                    </div>
+                    <div class="card-content">
+                        <h3>Loss Prevention</h3>
+                        <p>Stop theft and shrinkage with our retail-focused security strategies.</p>
+                        <a href="/loss-prevention.html" class="btn-link">Explore Service <span>&rarr;</span></a>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <!-- Service 2 -->
-            <div class="service-row reverse">
-                <div class="service-info">
-                    <h2>Emotion Detector AI</h2>
-                    <p>Step into the future of security with our proprietary Emotion Detection AI. This cutting-edge
-                        technology analyzes facial micro-expressions and body language patterns to assess the emotional
-                        state of individuals in real-time.</p>
-                    <p>By detecting signs of aggression, distress, or suspicious nervousness before a conflict occurs,
-                        our system allows for preemptive intervention. This is particularly effective in high-stakes
-                        environments like airports, casinos, and corporate headquarters.</p>
+    <!-- Mid-Page Parallax Break -->
+    <section class="parallax-cta" style="background-image: url('/public/images/elite-security.jpeg'); margin: 4rem 0;">
+        <div class="parallax-cta-overlay" style="background: rgba(0, 0, 0, 0.7);"></div>
+        <div class="parallax-cta-content container">
+            <h2 class="cta-title gsap-fade-up">Security That Never Sleeps</h2>
+            <p class="gsap-fade-up" style="font-size: 1.2rem; color: #ddd; max-width: 600px; margin: 0 auto;">
+                From residential peace of mind to high-stakes executive protection, we handle it all.
+            </p>
+        </div>
+    </section>
+
+    <section class="services-list section-full" style="padding-top: 0;">
+        <div class="container">
+            <div class="services-grid stagger-grid">
+
+                <!-- 5. Elite Suit & Tie -->
+                <div class="glass-card-3d">
+                    <div class="card-image">
+                        <img src="/public/images/elite-security.jpeg" alt="Elite Security">
+                    </div>
+                    <div class="card-content">
+                        <h3>Elite Suit & Tie</h3>
+                        <p>Discreet, high-class security for luxury environments and corporate settings.</p>
+                        <a href="/elite-security.html" class="btn-link">Explore Service <span>&rarr;</span></a>
+                    </div>
                 </div>
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1000&auto=format&fit=crop"
-                        alt="AI Technology">
+
+                <!-- 6. Concierge Security -->
+                <div class="glass-card-3d">
+                    <div class="card-image">
+                        <img src="/public/images/concierge-security.jpeg" alt="Concierge Security">
+                    </div>
+                    <div class="card-content">
+                        <h3>Concierge Security</h3>
+                        <p>Front-desk security that blends hospitality with vigilance.</p>
+                        <a href="/concierge-security.html" class="btn-link">Explore Service <span>&rarr;</span></a>
+                    </div>
                 </div>
+
+                <!-- 7. Executive Protection -->
+                <div class="glass-card-3d">
+                    <div class="card-image">
+                        <img src="/public/images/executive-protection.jpeg" alt="Executive Protection">
+                    </div>
+                    <div class="card-content">
+                        <h3>Executive Protection</h3>
+                        <p>Personal bodyguards and close protection for VIPs and executives.</p>
+                        <a href="/executive-protection.html" class="btn-link">Explore Service <span>&rarr;</span></a>
+                    </div>
+                </div>
+
+                <!-- 8. House Protection -->
+                <div class="glass-card-3d">
+                    <div class="card-image">
+                        <img src="/public/images/house-protection.jpeg" alt="House Protection">
+                    </div>
+                    <div class="card-content">
+                        <h3>House Protection</h3>
+                        <p>Dedicated security for residential properties and gated communities.</p>
+                        <a href="/house-protection.html" class="btn-link">Explore Service <span>&rarr;</span></a>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <!-- Service 3 -->
-            <div class="service-row">
-                <div class="service-info">
-                    <h2>Static & Building Security</h2>
-                    <p>Our static security guards are more than just a visible deterrent; they are the first line of
-                        defense for your facility. Rigorously trained in access control, conflict resolution, and
-                        emergency response, our personnel ensure the safety of your staff and assets.</p>
-                    <p>Whether for residential complexes, commercial office buildings, or retail centers, our guards
-                        maintain a professional presence. Duties include ID checks, perimeter patrols, concierge
-                        services, and detailed incident reporting.</p>
-                </div>
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=1000&auto=format&fit=crop"
-                        alt="Security Guard">
-                </div>
-            </div>
 
-            <!-- Service 4 -->
-            <div class="service-row reverse">
-                <div class="service-info">
-                    <h2>Event & Construction Security</h2>
-                    <p>From large-scale music festivals to active construction sites, we provide specialized security
-                        planning and execution. Our team handles crowd management, VIP protection, and equipment
-                        safeguarding with military precision.</p>
-                    <p>We assess site vulnerabilities to create a custom security plan that mitigates risks such as
-                        theft, vandalism, and unauthorized entry. Our guards are equipped to handle high-pressure
-                        situations, ensuring your event runs smoothly and your site remains secure.</p>
-                </div>
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1000&auto=format&fit=crop"
-                        alt="Event Security">
-                </div>
-            </div>
 
+    <!-- Parallax CTA Wrapper -->
+    <section class="parallax-cta"
+        style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2670&auto=format&fit=crop');">
+        <div class="parallax-cta-overlay"></div>
+        <div class="parallax-cta-content container">
+            <h2 class="cta-title gsap-fade-up">Ready to Secure Your Future?</h2>
+            <p class="gsap-fade-up"
+                style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Expert security solutions are just a click away.
+            </p>
+            <a href="/contact.html" class="btn gsap-fade-up">Get A Quote</a>
         </div>
     </section>
 
@@ -115,13 +201,19 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>POINT ZERO SECURITY</h3>
+                    <div class="logo footer-logo" style="margin-bottom: 1.5rem;">
+                        <img src="/logo.png" alt="Guardem">
+                        <div class="logo-text">
+                            <span class="brand-name">GUARDEM</span>
+                            <span class="brand-subtitle">Security LTD.</span>
+                        </div>
+                    </div>
                     <p>We provide innovative technology solutions with a wide range of services tailored to meet your
                         unique needs. Our clear procedures and precise reporting illustrate the value of our work.</p>
                     <div class="social-links">
-                        <a href="#">FB</a>
-                        <a href="#">IG</a>
-                        <a href="#">LI</a>
+                        <a href="https://www.facebook.com/profile.php?id=61551417292622" target="_blank">FB</a>
+                        <a href="https://www.instagram.com/pointzeroglobal?igsh=OHV4cWUzZ3UzMG9x" target="_blank">IG</a>
+                        <a href="https://www.linkedin.com/company/point-zero-global-services-ltd" target="_blank">LI</a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -146,11 +238,11 @@
                     <h3>CONTACT</h3>
                     <p>203-12885 80th Avenue, Surrey, BC, V3W 0E6</p>
                     <p>(+1) 778-297-2000</p>
-                    <p>info@pzfingerprinting.com</p>
+                    <p>info@guardem.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Point Zero Security. All Rights Reserved.</p>
+                <p>&copy; 2026 Guardem. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
